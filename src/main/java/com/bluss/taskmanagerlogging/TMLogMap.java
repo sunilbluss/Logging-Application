@@ -28,7 +28,7 @@ public class TMLogMap {
 	public static enum TMActions{
 		insert, select, delete, update, scoring, connect, disconnect,
 		cache, status, start, stop, init, waiting, statusreport, open, close,
-		configSetup,consume, error, shutdown,test;
+		configSetup,consume, error, shutdown,test,development;
 	}
 	
 	/**

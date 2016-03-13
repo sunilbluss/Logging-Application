@@ -13,5 +13,6 @@ public class TestTMLogger {
 	public void testLogging(){
 		LOGGER.info(action(TMActions.test).add("info", "testing"));
 		LOGGER.error(action(TMActions.test).add("error", "testing"));
+		LOGGER.error(action(TMActions.development).add("name", "value"));
 	}
 }
