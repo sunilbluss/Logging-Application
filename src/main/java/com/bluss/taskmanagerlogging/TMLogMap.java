@@ -28,7 +28,7 @@ public class TMLogMap {
 	public static enum TMActions{
 		insert, select, delete, update, scoring, connect, disconnect,
 		cache, status, start, stop, init, waiting, statusreport, open, close,
-		configSetup,consume, error, shutdown;
+		configSetup,consume, error, shutdown,test;
 	}
 	
 	/**
@@ -58,6 +58,14 @@ public class TMLogMap {
 		myLogMap = myLogMap.add(TMLogTags.caller_method_name,
 				stackTraceElement.getMethodName());
 		return myLogMap;
+	}
+	
+	public TMLogMap add(String name, String value) {
+		if (logData == null) {
+			return new TMLogMap(name, value);
+		}
+		logData.put(name, value);
+		return this;
 	}
 	
 	public TMLogMap add(TMLogTags tagKey, String tagValue) {
